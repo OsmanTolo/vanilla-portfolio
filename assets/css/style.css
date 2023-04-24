@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=League+Spartan:wght@300;400;500;600;700&family=Spectral:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --light-clr: #f3f3f3;
+  --light-grey-clr: #e3e3e7;
+  --dark-clr: #000026;
+  --accent-clr: #4830e6;
+
+  --header-ff: "Spectral", serif;
+  --para-ff: "League Spartan", sans-serif;
+  --misc-ff: "DM Serif Display", serif;
+
+  --h1-fs-mobile: 32px;
+  --h2-fs-mobile: 24px;
+  --h3-fs-mobile: 20px;
+  --para-fs-mobile: 16px;
+
+  --container-padding: 16px;
+  --container-margin: 0 auto;
+
+  --box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.2);
+  --box-shadow--small: 0 0 0.5rem -0.25rem rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--para-ff);
+  font-size: var(--para-fs-mobile);
+  background: var(--light-clr);
+  color: var(--dark-clr);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--header-ff);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--h1-fs-mobile);
+}
+
+h2 {
+  font-size: calc(var(--h2-fs-mobile));
+}
+
+h3 {
+  font-size: calc(var(--h3-fs-mobile));
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent-clr);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  transition: filter 0.5s;
+}
+
+/* General Styles */
+.container {
+  max-width: 100%;
+  margin: var(--container-margin);
+  padding: var(--container-padding);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  background: var(--light-clr);
+  font-weight: 500;
+  color: var(--accent-clr);
+  border: 1px solid var(--accent-clr);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  background-color: var(--light-clr);
+  color: var(--dark-clr);
+  border: 1px solid var(--dark-clr);
+}
+
+.btn--scroll-to {
+  background: var(--accent-clr);
+  color: var(--light-clr);
+}
+
+.btn--scroll-to:hover {
+  color: var(--accent-clr);
+  border: 1px solid var(--accent-clr);
+}
+
+.header {
+  /* padding: 0 3rem; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  :root {
+    --container-padding: 30px;
+    --h1-fs-mobile: 48px;
+    --h2-fs-mobile: 36px;
+    --h3-fs-mobile: 28px;
+    --para-fs-mobile: 20px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    --container-padding: 50px;
+    --h1-fs-mobile: 64px;
+    --h2-fs-mobile: 48px;
+    --h3-fs-mobile: 36px;
+    --para-fs-mobile: 24px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
