@@ -12,7 +12,15 @@
     <div class="container">
       <header class="header">
         <nav class="nav">
+          <!-- Logo -->
           <div class="nav__logo">Osman Dumbuya</div>
+          <!-- Hamburger menu -->
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <!-- Navigation Links -->
           <ul class="nav__links">
             <li class="nav__item">
               <a href="#section--1" class="nav__link">About</a>
@@ -24,27 +32,26 @@
               <a href="#section--3" class="nav__link">Skills</a>
             </li>
             <li class="nav__item">
-              <a href="#section--4" class="nav__link">Contact</a>
+              <a href="#section--4" class="nav__link nav__link--btn"
+                >Get in touch!</a
+              >
             </li>
           </ul>
         </nav>
 
         <div class="header__title">
-          <h3>Front-End Developer</h3>
-          <h1>
-            Hi, I'm <span class="highlight">Osman</span><br />
-            <span class="highlight">Dumbuya</span>
-          </h1>
-          <p>
-            From wires to websites, I've made the leap! I'm an electrical
-            engineer turned software developer in Bristol, passionate about
-            creating beautiful, accessible, and user-friendly applications for
-            the web. With every line of code, I strive to craft software that is
-            responsive and delightful to use. Let's collaborate and bring your
-            digital vision to life!
-          </p>
-          <button class="btn btn--scroll-to">Learn more &DownArrow;</button>
-          <button class="btn">My resume</button>
+          <div class="header-text">
+            <div class="header-role">Front-End Developer</div>
+            <h1>Hi, I'm <span class="highlight">Osman</span></h1>
+            <p class="header-description">
+              From wires to websites, I'm an electrical engineer turned software
+              developer. I strive to craft software that is responsive and
+              delightful to use. Let's collaborate and bring your digital vision
+              to life!
+            </p>
+            <button class="btn btn--scroll-to">Learn more &DownArrow;</button>
+            <button class="btn">My resume</button>
+          </div>
           <img
             src="./assets/images/osman-cropped-no-bg.png"
             alt="Image of Osman Dumbuya"
