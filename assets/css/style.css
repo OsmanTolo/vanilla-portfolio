@@ -122,7 +122,8 @@ img {
 }
 
 .nav.sticky {
-  height: 4.5rem;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav__logo {
