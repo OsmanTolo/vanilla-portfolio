@@ -11,7 +11,7 @@ const handleHover = function (e) {
   if (e.target.classList.contains("nav__link")) {
     const link = e.target;
     const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-    const logo = link.closest(".nav").querySelector("img");
+    const logo = link.closest(".nav").querySelector("div");
 
     siblings.forEach((sibling) => {
       if (sibling !== link) sibling.style.opacity = this;
@@ -53,3 +53,12 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+// toggle light mode
+const toggleThemeBtn = document.querySelector("#theme-toggle");
+toggleThemeBtn.addEventListener("click", function () {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+});
