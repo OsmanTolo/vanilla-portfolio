@@ -11,7 +11,7 @@ const handleHover = function (e) {
   if (e.target.classList.contains("nav__link")) {
     const link = e.target;
     const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-    const logo = link.closest(".nav").querySelector("div");
+    const logo = link.closest(".nav").querySelector("a");
 
     siblings.forEach((sibling) => {
       if (sibling !== link) sibling.style.opacity = this;
@@ -34,6 +34,7 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 });
 
 /**Sticky Navigation  */
+
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
 

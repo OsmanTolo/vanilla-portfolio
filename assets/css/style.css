@@ -23,6 +23,7 @@
 
   --container-padding: 0 16px;
   --container-margin: 0 auto;
+  --container-width: 1200px;
 
   --box-shadow: 0 0 2rem -1rem var(--secondary-clr);
   --box-shadow--small: 0 0 0.5rem -0.25rem rgba(0, 0, 0, 0.2);
@@ -85,13 +86,14 @@ p {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: var(--container-margin);
 }
 
 .section {
+  /* padding: 10rem 3rem; */
   padding: 10rem 0;
-  border-top: 1px solid var(--accent-clr);
+  border-top: 1px solid #4a2358;
   transition: transform 1s, opacity 1s;
 }
 
@@ -124,7 +126,7 @@ p {
 
 /* HEADER */
 .header {
-  padding: 0 3rem;
+  /* padding: 0 3rem; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -199,7 +201,7 @@ p {
   align-items: center;
   height: 5rem;
   width: 100%;
-  padding: 0 6rem;
+  /* padding: 0 6rem; */
   z-index: 100;
 }
 
@@ -208,10 +210,15 @@ p {
   position: fixed;
   background-color: var(--secondary-clr);
   box-shadow: var(--box-shadow);
+  width: var(--container-width);
 }
 
 .nav__logo {
   transition: all 0.3s;
+}
+
+.nav__logo img {
+  height: 3rem;
 }
 
 .nav__links {
@@ -251,7 +258,13 @@ p {
   margin: 0 auto;
 }
 
-.section__title p {
+.section__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section__description p {
   margin: 0 0 1rem;
   font-size: var(--fs-small);
   opacity: var(--opacity);
@@ -264,9 +277,8 @@ p {
 .skills {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1.5rem;
-  margin-top: 3rem;
 }
 
 .skill-icon {
@@ -279,7 +291,24 @@ p {
 .skill-icon i {
   font-size: 4rem;
   color: var(--accent-clr);
+  opacity: var(--opacity);
 }
+
+.skill-icon i:hover {
+  opacity: 1;
+}
+
 .skill-icon p {
+  margin-top: 1rem;
   font-size: var(--fs-xsmall);
+  opacity: var(--opacity);
+}
+
+.img-container {
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    var(--secondary-clr) 50%,
+    transparent
+  );
+  mask-image: linear-gradient(180deg, var(--secondary-clr) 50%, transparent);
 }
